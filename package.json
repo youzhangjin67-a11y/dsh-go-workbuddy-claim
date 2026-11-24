@@ -1,0 +1,39 @@
+{
+  "name": "local-workbuddy-claim",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/youzhangjin67-a11y/dsh-go-workbuddy-claim.git"
+  },
+  "homepage": "https://github.com/youzhangjin67-a11y/dsh-go-workbuddy-claim#readme",
+  "bugs": {
+    "url": "https://github.com/youzhangjin67-a11y/dsh-go-workbuddy-claim/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "title": { "zh": "WorkBuddy 签到", "en": "WorkBuddy Check-in" },
+    "icon": "wallet",
+    "contributes": {
+      "composer.strip": [
+        { "id": "wb-strip", "icon": "wallet", "panel": "wb" }
+      ],
+      "composer.actions": [
+        { "id": "claim", "label": { "zh": "领积分", "en": "Claim" }, "icon": "wallet" }
+      ],
+      "panels": [
+        { "id": "wb", "title": { "zh": "WorkBuddy 签到", "en": "Check-in" }, "icon": "wallet", "placement": ["session.tab", "features"] }
+      ]
+    }
+  }
+}
